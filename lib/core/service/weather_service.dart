@@ -23,4 +23,23 @@ class WeatherService {
       return ApiResponse<WeatherData?>(type: ResponseType.error);
     }
   }
+
+  Future<ApiResponse<CurrentWeatherData?>> fetchCurrentWeather(double lat, double lon) async {
+    try {
+      final response = await _apiService.get<CurrentWeatherData>(
+        'weather',
+        (data) => CurrentWeatherData.fromJson(data),
+        queryParams: {
+          'lat': lat,
+          'lon': lon,
+          'appid': _apiKey,
+          'lang': 'tr',
+          'units': 'metric',
+        },
+      );
+      return response;
+    } catch (e) {
+      return ApiResponse<CurrentWeatherData?>(type: ResponseType.error);
+    }
+  }
 }

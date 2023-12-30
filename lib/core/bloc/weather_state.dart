@@ -6,10 +6,11 @@ class WeatherInitial extends WeatherState {}
 
 class WeatherLoadInProgress extends WeatherState {}
 
-class WeatherLoadSuccess extends WeatherState {
-  final WeatherData weatherData;
+class WeatherCombinedLoadSuccess extends WeatherState {
+  final CurrentWeatherData? currentWeatherData;
+  final WeatherData? weatherForecastData;
 
-  WeatherLoadSuccess({required this.weatherData});
+  WeatherCombinedLoadSuccess({this.currentWeatherData, this.weatherForecastData});
 }
 
 class WeatherLoadFailure extends WeatherState {

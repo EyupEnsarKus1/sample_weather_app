@@ -1,3 +1,26 @@
+class CurrentWeatherData {
+  final String name;
+  final Weather weather;
+  final Temperature temperature;
+  final Wind wind;
+
+  CurrentWeatherData({
+    required this.name,
+    required this.weather,
+    required this.temperature,
+    required this.wind,
+  });
+
+  factory CurrentWeatherData.fromJson(Map<String, dynamic> json) {
+    return CurrentWeatherData(
+      name: json['name'],
+      weather: Weather.fromJson(json['weather'][0]),
+      temperature: Temperature.fromJson(json['main']),
+      wind: Wind.fromJson(json['wind']),
+    );
+  }
+}
+
 class WeatherData {
   final City city;
   final List<WeatherForecast> forecastList;
