@@ -25,7 +25,6 @@ class _WeatherPageState extends State<WeatherPage> {
   void initState() {
     super.initState();
     _checkAndRequestLocationPermission();
-    _fetchWeatherData();
   }
 
   Future<void> _checkAndRequestLocationPermission() async {
@@ -54,6 +53,8 @@ class _WeatherPageState extends State<WeatherPage> {
       );
       return;
     }
+
+    _fetchWeatherData();
   }
 
   void _fetchWeatherData() async {
