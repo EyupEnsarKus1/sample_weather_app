@@ -32,6 +32,18 @@ Bu uygulama aşağıdaki Flutter paketlerini kullanmaktadır:
 - `intl`: Uluslararasılaştırma için.
 - `shimmer`: Yükleme animasyonları için.
 
+# Uygulama Ekran Görüntüleri
+
+## Ana Sayfa
+![Ana Sayfa](screenshots/splash_screen.jpg)
+
+## Detay Sayfası
+![Detay Sayfası](screenshots/detail_page.jpg)
+
+## Yükleme Durumu
+![Yükleme Durumu](screenshots/loading_state.jpg)
+
+
 
 
  
