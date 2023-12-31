@@ -263,60 +263,63 @@ class CurrentWeatherCard extends StatelessWidget {
       ),
       padding: AppPadding.p16.all(),
       margin: AppPadding.p8.vertical(),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            children: [
-              Text(
-                '${data.name}',
-                style: TextStyle(
-                  color: AppColors.white,
-                  fontSize: AppSizes.size20,
-                  fontWeight: AppWeights.bold,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                Text(
+                  '${data.name}',
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: AppSizes.size20,
+                    fontWeight: AppWeights.bold,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: AppSizes.size16,
-              ),
-              IconCircle(
-                iconUrl: iconUrl,
-                circleSize: AppSizes.size64,
-                iconSize: AppSizes.size32,
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              Row(
-                children: [
-                  SingleInfoCard(title: "Durum", value: data.weather.main),
-                  SizedBox(
-                    width: AppSizes.size4,
-                  ),
-                  SingleInfoCard(title: "Sıcaklık", value: "${data.temperature.temp}°C"),
-                  SizedBox(
-                    width: AppSizes.size4,
-                  ),
-                  SingleInfoCard(title: "Hissedilen", value: "${data.temperature.feelsLike}°C"),
-                ],
-              ),
-              SizedBox(
-                height: AppSizes.size8,
-              ),
-              Row(
-                children: [
-                  SingleInfoCard(title: "Minimum", value: "${data.temperature.tempMin}°C"),
-                  SizedBox(
-                    width: AppSizes.size4,
-                  ),
-                  SingleInfoCard(title: "Rüzgar", value: "${data.wind.speed} km/s, Yön: ${data.wind.deg}°"),
-                ],
-              ),
-            ],
-          ),
-        ],
+                SizedBox(
+                  height: AppSizes.size16,
+                ),
+                IconCircle(
+                  iconUrl: iconUrl,
+                  circleSize: AppSizes.size64,
+                  iconSize: AppSizes.size32,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    SingleInfoCard(title: "Durum", value: data.weather.main),
+                    SizedBox(
+                      width: AppSizes.size4,
+                    ),
+                    SingleInfoCard(title: "Sıcaklık", value: "${data.temperature.temp}°C"),
+                    SizedBox(
+                      width: AppSizes.size4,
+                    ),
+                    SingleInfoCard(title: "Hissedilen", value: "${data.temperature.feelsLike}°C"),
+                  ],
+                ),
+                SizedBox(
+                  height: AppSizes.size8,
+                ),
+                Row(
+                  children: [
+                    SingleInfoCard(title: "Minimum", value: "${data.temperature.tempMin}°C"),
+                    SizedBox(
+                      width: AppSizes.size4,
+                    ),
+                    SingleInfoCard(title: "Rüzgar", value: "${data.wind.speed} km/s, Yön: ${data.wind.deg}°"),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
