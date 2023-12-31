@@ -10,13 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49c5168-c1d8-47aa-adfc-49e60ac81f77" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/weather_animation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/design/app_colors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/design/app_sizes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/bloc/weather_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/bloc/weather_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/bloc/weather_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/bloc/weather_event.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/bloc/weather_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/bloc/weather_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/model/weather_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/model/weather_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/service/weather_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/service/weather_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/weather_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/weather_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_weather_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sample_weather_app.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +55,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Documents\GitHub\sample_weather_app\assets" />
+      <recent name="C:\Users\USER\Documents\GitHub\sample_weather_app\lib\assets" />
       <recent name="C:\Users\USER\Documents\GitHub\sample_weather_app\lib\core\model" />
     </key>
   </component>
