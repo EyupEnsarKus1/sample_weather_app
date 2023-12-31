@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
 import 'package:sample_weather_app/design/app_sizes.dart';
+import 'package:sample_weather_app/design/custom_shimmer.dart';
 
 import '../core/bloc/weather_bloc.dart';
 import '../core/bloc/weather_event.dart';
@@ -84,7 +85,25 @@ class _WeatherPageState extends State<WeatherPage> {
       ),
       body: BlocBuilder<WeatherBloc, WeatherState>(
         builder: (context, state) {
-          if (state is WeatherCombinedLoadSuccess) {
+          if (state is WeatherLoadInProgress) {
+            return SingleChildScrollView(
+              child: Padding(
+                padding: AppPadding.p16.horizontal(),
+                child: Column(
+                  children: [
+                    CurrentWeatherCard.shimmerWidget(context),
+                    ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        itemCount: 5,
+                        itemBuilder: (context, index) {
+                          return WeatherForecastCard.shimmerWidget(context);
+                        })
+                  ],
+                ),
+              ),
+            );
+          } else if (state is WeatherCombinedLoadSuccess) {
             return Padding(
               padding: AppPadding.p16.horizontal(),
               child: Column(
@@ -116,7 +135,9 @@ class _WeatherPageState extends State<WeatherPage> {
                       fontWeight: AppWeights.bold,
                     ),
                   ),
-                  SizedBox(height: AppSizes.size8,),
+                  SizedBox(
+                    height: AppSizes.size8,
+                  ),
                   Expanded(
                     child: ListView.builder(
                       shrinkWrap: true,
@@ -131,8 +152,6 @@ class _WeatherPageState extends State<WeatherPage> {
                 ],
               ),
             );
-          } else if (state is WeatherLoadInProgress) {
-            return CircularProgressIndicator();
           } else if (state is WeatherLoadFailure) {
             return Text('Hata: ${state.message}');
           }
@@ -147,6 +166,15 @@ class WeatherForecastCard extends StatelessWidget {
   final WeatherForecast forecast;
 
   const WeatherForecastCard({super.key, required this.forecast});
+
+  static shimmerWidget(BuildContext context) {
+    return ShimmerContainer(
+      width: MediaQuery.of(context).size.width,
+      height: 100,
+      padding: AppPadding.p16.all(),
+      margin: AppPadding.p8.onlyBottom(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -213,6 +241,15 @@ class CurrentWeatherCard extends StatelessWidget {
   final CurrentWeatherData data;
 
   const CurrentWeatherCard({Key? key, required this.data}) : super(key: key);
+
+  static shimmerWidget(BuildContext context) {
+    return ShimmerContainer(
+      padding: AppPadding.p16.all(),
+      margin: AppPadding.p8.vertical(),
+      width: MediaQuery.of(context).size.width,
+      height: 150,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

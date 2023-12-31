@@ -8,6 +8,7 @@ import 'package:sample_weather_app/weather_page.dart';
 
 import 'core/bloc/weather_bloc.dart';
 import 'core/service/weather_service.dart';
+import 'design/app_colors.dart';
 import 'design/app_sizes.dart';
 
 void main() {
@@ -65,6 +66,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.darkGray,
       body: Center(
         child: Lottie.asset(
           "assets/weather_animation.json",

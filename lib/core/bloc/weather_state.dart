@@ -2,8 +2,6 @@ import '../model/weather_model.dart';
 
 abstract class WeatherState {}
 
-class WeatherInitial extends WeatherState {}
-
 class WeatherLoadInProgress extends WeatherState {}
 
 class WeatherCombinedLoadSuccess extends WeatherState {

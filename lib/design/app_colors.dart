@@ -15,4 +15,13 @@ class AppColors {
   static const Color darkGray = Color(0xFF0B131E);
   static const Color lightGray = Color(0xFF202B3B);
 
+  static const Color lightShimmerGray = Color(0xffe0e0e0);
+  static const Color darkShimmerGray = Color(0xff757575);
+
+  static Color shimmerBaseColor = lightShimmerGray.withOpacity(0.5);
+  static Color shimmerHighlightColor = lightShimmerGray.withOpacity(0.2);
+
+  static Color shimmerBackgroundColor(Brightness brightness) {
+    return brightness == Brightness.light ? AppColors.lightShimmerGray : AppColors.darkShimmerGray.withOpacity(0.5);
+  }
 }

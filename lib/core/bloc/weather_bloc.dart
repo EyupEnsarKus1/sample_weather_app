@@ -8,7 +8,7 @@ import '../service/weather_service.dart';
 class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
   final WeatherService _weatherService;
 
-  WeatherBloc(this._weatherService) : super(WeatherInitial()) {
+  WeatherBloc(this._weatherService) : super(WeatherLoadInProgress()) {
     on<WeatherAndCurrentRequested>(_onWeatherAndCurrentRequested);
   }
 
