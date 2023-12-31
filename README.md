@@ -35,13 +35,15 @@ Bu uygulama aşağıdaki Flutter paketlerini kullanmaktadır:
 # Uygulama Ekran Görüntüleri
 
 ## Ana Sayfa
-![Ana Sayfa](screenshots/splash_screen.jpg)
+<img src="screenshots/splash_screen.jpg" alt="Ana Sayfa" width="200" height="400"/>
 
 ## Detay Sayfası
-![Detay Sayfası](screenshots/detail_page.jpg)
+<img src="screenshots/detail_page.jpg" alt="Detay Sayfası" width="200" height="400"/>
 
 ## Yükleme Durumu
-![Yükleme Durumu](screenshots/loading_state.jpg)
+<img src="screenshots/loading_state.jpg" alt="Yükleme Durumu" width="200" height="400"/>
+
+
 
 
 
