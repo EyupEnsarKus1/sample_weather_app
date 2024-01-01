@@ -37,10 +37,10 @@ Bu uygulama aşağıdaki Flutter paketlerini kullanmaktadır:
 ## Ana Sayfa
 <img src="screenshots/splash_screen.jpg" alt="Ana Sayfa" width="200" height="400"/>
 
-## Detay Sayfası
+## Yükleme Durumu
 <img src="screenshots/detail_page.jpg" alt="Detay Sayfası" width="200" height="400"/>
 
-## Yükleme Durumu
+## Detay Sayfası
 <img src="screenshots/loading_state.jpg" alt="Yükleme Durumu" width="200" height="400"/>
 
 
